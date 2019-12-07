@@ -21,14 +21,12 @@ main {
     display: grid;
     width: 600px;
     height: 600px;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
 }
 
 .gridDiv {
     background-color: blue;
-    margin:2px;
-    padding: 2px;
+    margin:1px;
+    padding: 1px;
 }
 
 .color1 {
