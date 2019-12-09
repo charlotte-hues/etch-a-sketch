@@ -1,6 +1,9 @@
 const grid = document.querySelector('#sketchGrid');
-let size = 10;
+
 const gridDivs = document.querySelectorAll('.gridDiv');
+const sizeSlider = document.getElementById("gridSize");
+let size = sizeSlider.value;
+
 
 function createGrid() {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -38,11 +41,11 @@ function reset() {
     divs.forEach( function(el) { el.classList.remove('color1'); });
  }
 
- const changeSizeButton = document.getElementById('changeGridSize').addEventListener('click', resizeGrid);
+sizeSlider.addEventListener('input', resizeGrid);
 
  function resizeGrid() {  
     removeGrid();
-    size = prompt('WHAT SIZE?');
+    size = sizeSlider.value;
     createGrid();
  }
 
